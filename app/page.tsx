@@ -1,4 +1,6 @@
-export default function Home() {
+  import Link from "next/link";
+
+  export default function Home() {
   const today = new Date().toLocaleDateString("mn-MN", {
     year: "numeric",
     month: "long",
@@ -13,15 +15,24 @@ export default function Home() {
         </h1>
         <p className="text-sm text-zinc-500 dark:text-zinc-400">{today}</p>
         <div className="mt-4 flex flex-row gap-4">
-          <button className="rounded-full border border-zinc-300 px-5 py-2 text-sm font-medium text-black dark:border-zinc-700 dark:text-white">
+          <Link
+            href="/about"
+            className="rounded-full border border-zinc-300 px-5 py-2 text-sm font-medium text-black dark:border-zinc-700 dark:text-white"
+          >
             Тухай
-          </button>
-          <button className="rounded-full border border-zinc-300 px-5 py-2 text-sm font-medium text-black dark:border-zinc-700 dark:text-white">
+          </Link>
+          <Link
+            href="/works"
+            className="rounded-full border border-zinc-300 px-5 py-2 text-sm font-medium text-black dark:border-zinc-700 dark:text-white"
+          >
             Ажлууд
-          </button>
-          <button className="rounded-full border border-zinc-300 px-5 py-2 text-sm font-medium text-black dark:border-zinc-700 dark:text-white">
+          </Link>
+          <Link
+            href="/contact"
+            className="rounded-full border border-zinc-300 px-5 py-2 text-sm font-medium text-black dark:border-zinc-700 dark:text-white"
+          >
             Холбоо барих
-          </button>
+          </Link>
         </div>
       </div>
       <footer className="py-4 text-center text-xs text-zinc-400 dark:text-zinc-600">
